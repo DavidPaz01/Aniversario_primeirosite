@@ -78,4 +78,67 @@
         </div>
     </div>
 </body>
+    <head>
+    <style>
+        .caixa-dialogo {
+            border: 2px solid #333;
+            border-radius: 10px;
+            padding: 20px;
+            width: 300px;
+            text-align: center;
+            margin: 0 auto;
+            background-color: #f0f0f0;
+        }
+        .botao-sim {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 10px;
+            cursor: pointer;
+        }
+        .botao-nao {
+            background-color: #FF0000;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 10px;
+            cursor: pointer;
+        }
+        .botao-nao:hover {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="caixa-dialogo">
+        <h2>Você gostou?</h2>
+        <button class="botao-sim" onclick="mostrarMensagem('sim')">Sim</button>
+        <button class="botao-nao" onclick="mostrarMensagem('não')">Não</button>
+        <p id="resultado"></p>
+    </div>
+
+    <script>
+        function mostrarMensagem(escolha) {
+            const resultado = document.getElementById('resultado');
+            if (escolha === 'sim') {
+                resultado.innerHTML = 'Você escolheu <strong>Sim</strong>. Claro que você gostou, melhor não tem!';
+                resultado.style.color = '#4CAF50'; // Cor verde
+            } else if (escolha === 'não') {
+                resultado.innerHTML = 'Você escolheu <strong>Não</strong>. Égua, sério que tu tentou apertar no não!';
+                resultado.style.color = '#4CAF50'; // Cor verde
+            }
+        }
+    </script>
+</body>
 </html>
